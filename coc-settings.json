@@ -6,10 +6,12 @@
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": true,
   "explorer.icon.enableVimDevicons": true,
-  "explorer.file.showHiddenFiles": true,
+  "explorer.file.showHiddenFiles": false,
   "explorer.file.column.indent.indentLine": true,
   "explorer.keyMappings": {
    "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  }
+  },
+
+  "flutter.provider.hot-reload": false,
 }

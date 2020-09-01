@@ -72,12 +72,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'thosakwe/vim-flutter'
 
 Plug '907th/vim-auto-save'
-
-Plug 'easymotion/vim-easymotion'
-
 
 Plug 'frazrepo/vim-rainbow'
 
@@ -93,6 +89,9 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 ""Plug 'dart-lang/dart-vim-plugin'
@@ -109,17 +108,20 @@ hi IndentGuidesEven guibg=234 ctermbg=233
 
 "" Plug 'thosakwe/vim-flutter'
 "flutter"
-nnoremap <leader>fa :FlutterRun -d chrome --release<cr>
-nnoremap <leader>fq :FlutterQuit<cr>
-nnoremap <leader>fr :FlutterHotReload<cr>
-nnoremap <leader>fR :FlutterHotRestart<cr>
-nnoremap <leader>fD :FlutterVisualDebug<cr>
+"nnoremap <leader>fa :FlutterRun -d chrome --release<cr>
+"nnoremap <leader>fq :FlutterQuit<cr>
+"nnoremap <leader>fr :FlutterHotReload<cr>
+"nnoremap <leader>fR :FlutterHotRestart<cr>
+"nnoremap <leader>fD :FlutterVisualDebug<cr>
 "
 
 "vim auto save
+
 let g:auto_save = 1 
-let g:auto_save_silent = 1
-"
+let g:auto_save_silent = 1  
+
+"let g:auto_save_events = ["InsertLeave", ]
+"let g:auto_save_silent = 1  " do not display the auto-save notification
 "nerdtree
 "let NERDTreeShowHidden=1
 ":autocmd vimenter * NERDTree
@@ -142,19 +144,24 @@ let g:rainbow_load_separately = [
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'magenta']
 ""
-"easymotion"'
-" Move to word
-map  <Leader>f <Plug>(easymotion-bd-w)
+"vim sneak
+let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1
+highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
+highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
+let g:sneak#prompt = '🕵'
+let g:sneak#prompt = '🔎'
+
 "coc"
 
 source $HOME/.config/nvim/plug-config/coc.vim
 
 ""nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
 
-xmap <leader>cd  <Plug>(coc-definition)
+"xmap <leader>cd  <Plug>(coc-definition)
 
 "line"
 let g:lightline = {

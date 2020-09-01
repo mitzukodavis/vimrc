@@ -196,3 +196,13 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 "hi! CocErrorSign guifg=#e0485a
 "hi! CocInfoSign guibg=#e0485a
 "hi! CocWarningSign guifg=#e0485a
+"           unable to correctly establish a connection, for example due
+
+nnoremap <leader>fr :CocCommand flutter.run -d chrome<cr>
+nnoremap <leader>fR :CocCommand flutter.run -d chrome --release<cr>
+nnoremap <leader>hR :CocCommand flutter.dev.hotRestart<cr>
+nnoremap <leader>hr :CocCommand flutter.dev.hotReload <cr>
+nnoremap <leader>ol :CocCommand flutter.dev.openDevLog<cr>
+nnoremap <leader>cf :CocCommand flutter.
+
+
