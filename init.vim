@@ -1,7 +1,13 @@
 syntax on
+"
+"test
+
+
+set encoding=utf8
+let g:airline_powerline_fonts = 1
 
 colorscheme monokai
-
+"coc background
 hi Normal ctermbg=16 guibg=#1a1a1a
 hi LineNr ctermbg=16 guibg=#1a1a1a
 
@@ -9,7 +15,7 @@ set hidden
 
 ""set tabstop=2 softtabstop=2
 set nobackup
-set relativenumber
+
 set noswapfile
 ""set incsearch for future
 " guard for distributions lacking the persistent_undo feature.
@@ -31,8 +37,6 @@ if has('persistent_undo')
 endif
 
 set number
-set cursorline
-set cursorcolumn
 
 set shiftwidth=1
 set softtabstop=1
@@ -152,7 +156,7 @@ highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
 let g:sneak#prompt = '🔎'
 
 map z <Plug>Sneak_s
-map Z <Plug>Sneak_s
+map Z <Plug>Sneak_S
 "coc"
 
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -161,7 +165,6 @@ source $HOME/.config/nvim/plug-config/coc.vim
 "nmap <silent> gy <Plug>(coc-type-definition)
 "nmap <silent> gi <Plug>(coc-implementation)
 "nmap <silent> gr <Plug>(coc-references)
-
 "xmap <leader>cd  <Plug>(coc-definition)
 
 "line"
@@ -173,5 +176,8 @@ let g:lightline = {
 "let g:NERDCreateDefaultMappings = 0
 
 "nnoremap <leader>cc :NERDCommenterToggle<cr>
+
+hi CocExplorerNormalFloatBorder guifg=#0f0f0f guibg=#0f0f0f
+hi CocExplorerNormalFloat guibg=#0f0f0f
 
 

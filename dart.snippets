@@ -51,7 +51,7 @@ void main() {
 }
 endsnippet
 
-snippet stateless "Description" b
+snippet statelessCont "Description" b
 import 'package:flutter/material.dart';
 
 class ${1} extends StatelessWidget {
@@ -66,10 +66,27 @@ class ${1} extends StatelessWidget {
 }
 endsnippet
 
-snippet getcontrollervoid "GetxController Void" b
+
+snippet statelessSca "Description" b
+import 'package:flutter/material.dart';
+
+class ${1} extends StatelessWidget {
+  const ${1}({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ${2:null},
+    );
+  }
+}
+endsnippet
+
+
+snippet getcontrollervoid "getxcontroller void" b
 import 'package:get/get.dart';
 
-class ${1}Controller extends GetxController {
+class ${1}controller extends getxcontroller {
 
 }
 endsnippet
@@ -110,6 +127,34 @@ class ${1:MyModel} {
     return data;
   }
 } 
+endsnippet
+
+
+
+
+snippet mateapp "Material App" b
+import 'package:flutter/material.dart';
+ 
+void main() => runApp(MyApp());
+ 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: Center(
+          child: Container(
+            child: Text('Hello World'),
+          ),
+        ),
+      ),
+    );
+  }
+}
 endsnippet
 
 
