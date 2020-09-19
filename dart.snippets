@@ -86,7 +86,7 @@ endsnippet
 snippet getcontrollervoid "getxcontroller void" b
 import 'package:get/get.dart';
 
-class ${1}controller extends getxcontroller {
+class ${1}Controller extends GetxController {
 
 }
 endsnippet
@@ -157,5 +157,24 @@ class MyApp extends StatelessWidget {
 }
 endsnippet
 
+snippet  floatingABSni "floatingActionButton snippet" b
+floatingActionButton: FloatingActionButton(
+		child: Icon(Icons.add),
+		onPressed: () {},
+),
+endsnippet
 
+snippet appBarSni "appBar snippet" b
+appBar: AppBar(
+		title: Text('${1:Name}'),
+),
+endsnippet
+
+snippet ColumnSni "Column Snippet" b
+Column(
+		children: [
+				${1:Container( child: null,),},
+	 ],
+),
+endsnippet
 

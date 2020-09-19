@@ -1,7 +1,4 @@
 syntax on
-"
-"test
-
 
 set encoding=utf8
 let g:airline_powerline_fonts = 1
@@ -13,7 +10,14 @@ hi LineNr ctermbg=16 guibg=#1a1a1a
 
 set hidden
 
-""set tabstop=2 softtabstop=2
+
+
+"space tans
+set tabstop=1
+set shiftwidth=1
+set softtabstop=1
+set expandtab
+
 set nobackup
 
 set noswapfile
@@ -38,8 +42,6 @@ endif
 
 set number
 
-set shiftwidth=1
-set softtabstop=1
 "
 "LeaderKey"
 let mapleader = " "
@@ -159,7 +161,7 @@ map z <Plug>Sneak_s
 map Z <Plug>Sneak_S
 "coc"
 
-source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/coc.vim
 
 ""nmap <silent> gd <Plug>(coc-definition)
 "nmap <silent> gy <Plug>(coc-type-definition)
@@ -169,7 +171,7 @@ source $HOME/.config/nvim/plug-config/coc.vim
 
 "line"
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'simpleblack',
       \ }
 "nerdcommenter"
  
